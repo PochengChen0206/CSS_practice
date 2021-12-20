@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nippon dept</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 1rem;
+        }
+
+        /* -------------------header-------------------- */
+        header {
+            background: #FAFAF2;
+            padding-bottom: 46px;
+        }
+
+        .header-top {
+            /* 與下面的row對齊 */
+            margin-right: -15px;
+        }
+
+        .header-top ul {
+            display: flex;
+            justify-content: end;
+            list-style: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding-top: 16px;
+        }
+
+        .header-top a {
+            text-decoration:none;
+            color: black;
+        }
+
+        .header-top li :hover {
+            opacity: 0.5;
+        }
+
+        .header-main {
+            margin-top: 12px;
+            width: 100%;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .header-logo {
+            max-width: 20%;
+            height: 30%;
+        }
+        
+        .header-logo img {
+            /* width: 148px; */
+            width: 100%;
+            height: 100%;
+        }
+
+        .header-logo :hover {
+            opacity: 0.5;
+        }
+
+        .header-center ul {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .header-center li {
+            width: 50px;
+            height: auto;
+            margin: 0 10px;
+        }
+
+        .header-center  img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 12px;
+        }
+        
+        .header-center a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: black;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .header-center span {
+            width: 60px;
+        }
+
+        .header-center a:hover  {
+            opacity: 0.5;
+        }
+
+        .header-btn ul {
+            width: 100%;
+        }
+
+        .header-btn li {
+            width: 25%;
+            height: auto;
+        }
+
+        .header-btn li :hover {
+            opacity: 0.5;
+        }
+
+        .header-btn img {
+            width: 50%;
+            height: auto;
+            margin-bottom: 3px;
+        }
+
+        .header-btn a {
+            color: black;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-size: 11px;
+        }
+
+        .header-search {
+            border-bottom: 1px solid #C6C6C6;
+        }
+
+        .header-search-icon {
+            width: 17px;
+            height: 17px;
+        }
+
+        .header-search img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .search-keyword {
+            width: 210px;
+            height: 20px;
+            border: none;
+            background-color:transparent;
+            font-size: 1.2rem;
+            margin: 0 0 4px;
+        }
+
+/* ---------------------------------main left-menu--------------------------- */
+        main {
+            background: #FAFAF2;
+        }
+
+        .left-menu {
+            display: flex;
+            flex: 0 1 180px;
+            /* min-width: 150px; */
+            max-width: 14%;
+            /* margin: 19px 80px 0 0; */
+            margin-top: 19px;
+            
+        }
+
+        .left-mtnu-title {
+            padding-left: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .left-mtnu-title::before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 35%;
+            left: 0;
+            width: 16px;
+            height: 1px;
+            background-color: black;
+        }
+
+        .left-menu .item {
+            list-style: none;
+            padding-bottom: 13px;
+        }
+        .left-menu ul {
+            margin-left: -40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .left-menu a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .item-list {
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 1.5;
+            padding-bottom: 13px;
+            position: relative;
+        }
+
+        .item-list a:hover {
+            color: #C6C6C6;
+        }
+
+        .item a:hover {
+            color: #C6C6C6;
+        }
+
+        .item-list span {
+            display: block;
+            position: absolute;
+            top: 5%;
+            right: 0;
+            width: 11px;
+            height: 11px;
+            cursor: pointer;
+        }
+        
+        .item-list span::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 5px;
+            left: 0px;
+            width: 11px;
+            height: 1px;
+            background-color: #000;
+        }
+
+        .item-list span::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 5px;
+            width: 1px;
+            height: 11px;
+            background-color: #000;
+        }
+        
+        .left-menu-bottom {
+            margin-top: 65px;
+            width: 100%;
+        }
+
+        .left-menu-bottom li {
+            list-style: none;
+            width: 100%;
+        }
+
+        .left-menu-bottom img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .left-menu-bottom img:hover {
+            opacity: .5;
+        }
+
+        .clothes-img img:hover {
+            opacity: .5;
+        }
+
+        .food-img img:hover {
+            opacity: .5;
+        }
+
+        .live-img img:hover {
+            opacity: .5;
+        }
+
+        .play-img img:hover {
+            opacity: .5;
+        }
+
+/* ---------------------------------main pane--------------------------- */
+        .pane-main {
+            width: 80%;
+        }
+
+        .pane-main-top-bg {
+            width: 100%;
+            position: relative;
+            padding-top: 23px;
+        }
+
+        .pane-main-top-bg img:hover {
+            opacity: .5;
+        }
+
+        .mv-logo {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 81px;
+            z-index: 99;
+        }
+
+        .mv-comment {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+      
+        .pane-main-top-btn {
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .pane-main-top-btn ul {
+            display: flex; 
+            justify-content: center;
+            padding-left: 0%;
+        }
+
+        .pane-main-top-btn li {
+            list-style: none;
+            width: 5px;
+            height: 5px;
+            border-radius: 5px;
+            background: #c6c6c6;
+            cursor: pointer;
+        }
+
+        .info {
+            /* width: 864px; */
+            width: 95%;
+            margin: 64px auto 0;
+            position: relative;
+            padding-left: 124px;
+        }
+
+        .info-img {
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 16px;
+        }
+
+        .info-text-item {
+            border-bottom: 1px solid #C6C6C6;
+            padding: 6px 0;
+            cursor: pointer;
+        }
+
+        .info-text-item:hover {
+            opacity: .5;
+        }
+
+        .info-text-item .date {
+            /* width: 130px; */
+            width: 18%;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .info-text-item p {
+            /* width: 610px; */
+            width: 82%;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .next-page {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+        }
+
+        .next-page a:hover {
+            color: #C6C6C6;
+        }
+
+        .next-page a {
+            text-decoration: none;
+            color: black;
+            display:flex;
+            align-items: center;
+            font-size: 1.4rem;
+            font-weight: 600;
+            padding-right: 88px;
+            position: relative;
+            height: 58px;
+        }
+
+        .next-page a::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            width: 58px;
+            height: 58px;
+            border: 1px solid #171717;
+            background-color: #fff;
+            border-radius: 50%;
+            background-image: url('./nippon-dept/ico_link_plus_off.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 1.1rem;
+        }
+
+        /* ---------------------------------main block--------------------------- */
+        .block-top-free {
+            margin-top: 100px;
+        }
+        
+        .block-top-free-logo {
+            margin: 0 auto;
+            margin-bottom: 80px;
+            width: 80px;
+            height: 107px;
+        }
+
+        .block-top-free-logo img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .block-top-free-img {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .block-top-free-img a{
+            width: 100%;
+        }
+
+        .block-top-free-img1 img {
+            width: 100%;
+        }
+
+        .block-top-free-img img:hover {
+            opacity: .5;
+        }
+
+        .block-top-free-img .img-450 {
+            margin-top: 10px;
+        }
+
+        .block-top-buy-logo {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+            margin-bottom: 80px;
+        }
+
+        .block-top-buy-logo img {
+            width: 80px;
+            height: 107px;
+        }
+        .block-top-buy .ttl a:hover {
+            color: #C6C6C6;
+        }
+
+        .block-top-buy .ttl a {
+            text-decoration: none;
+            color:black;
+            font-size: 22px;
+            font-weight: 600;
+            padding: 0 15px;
+        }
+
+        .block-top-buy .goods {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .goods-item a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .goods-item {
+            width: 100%;
+        }
+
+
+        .goods-item-img img {
+            /* width: 221px;
+            height: 221px; */
+            width: 100%;
+            height: 100%;
+        }
+
+        .goods-item-img img:hover {
+            opacity: .5;
+        }
+
+        .goods-item-text p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .goods-item-text a:hover {
+            color: #C6C6C6;
+        }
+
+        .block-top-read-logo {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+            margin-bottom: 80px;
+        }
+
+        .block-top-read-logo img {
+            width: 80px;
+            height: 107px;
+        }
+        .block-top-read-block2 .left:hover {
+            opacity: .5;
+        }
+
+        .block-top-read-block2 .right:hover {
+            opacity: .5;
+        }
+
+        .block-top-read-block2 .img-450 {
+            width: 100%;
+        }
+
+        .img-450 img {
+            /* width: 450px;
+            height: 210px; */
+            cursor: pointer;
+        }
+
+        .block-top-read-text {
+            /* width: 336px; */
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .block-top-read-text .date {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        .block-top-read-text .ttl {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-top: 4px;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        .block-top-read-text .comment {
+            font-size: 1.4rem;
+            line-height: 1.5;
+            margin-top: 4px;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        .img-298 {
+            /* width: 298px; */
+            width: 100%;
+            cursor: pointer;
+        }
+        
+        .block-top-read-block3:hover {
+            opacity: .5;
+        }
+
+        .block-top-read-text-3 {
+            /* width: 269px; */
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .block-top-read-text-3 .date {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        .block-top-read-text-3 .ttl {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-top: 4px;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        .block-top-read-text-3 .comment {
+            font-size: 1.4rem;
+            line-height: 1.5;
+            margin-top: 4px;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        .block-top-read {
+            margin-bottom: 150px;
+        }
+
+    /* ---------------------------------block-concept--------------------------- */
+        .block-concept {
+            width: 100%;
+            background: #fff;
+            padding: 52px 0;
+        }
+
+        .block-concept-detail {
+            /* width: 1025px;
+            height: 396px; */
+            width: 88%;
+            height: 396px;
+            background: url('./nippon-dept/bnr_EC_kokoro.jpg') center no-repeat;
+            background-size: contain;
+            padding: 60px 50px;
+        }
+        
+        .block-concept-detail-comment {
+            /* width: 300px; */
+            width: 33%;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .block-concept-detail-link a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000;
+            width: 300px;
+            height: 58px;
+            padding-left: 70px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .block-concept-detail-link a:hover {
+            opacity: .5;
+        }
+
+        .block-concept-detail-link a::after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            width: 58px;
+            height: 58px;
+            border: 1px solid #171717;
+            background-color: #fff;
+            border-radius: 50%;
+            background-image: url('./nippon-dept/ico_link_arw_off.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 22px 6px;
+        }
+
+    /* ---------------------------------footer--------------------------- */    
+        .pane-footer {
+            width: 100%;
+            background: #e5e4db;
+            padding: 80px 0;
+        }
+
+        .pane-footer-left .left-img img:hover {
+            opacity: .5;
+        }
+
+        .pane-footer-right {
+            width: 756px;
+            flex-wrap: wrap;
+        }
+
+        .pane-footer-right-item {
+            width: 354px;
+        }
+        
+        .fr-ttl {
+            border-bottom: 1px solid #C6C6C6;
+            padding-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .fr-text {
+            margin-top: 12px;
+        }
+
+        .fr-text1 {
+            font-size: 12px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .fr-text2 {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .fr-btn a{
+            text-decoration: none;
+            color: #000;
+            width: 100%;
+            height: 34px;
+            border: 1px solid #171717;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 24px;
+            font-size: 1.4rem;
+        }
+
+        .fr-btn a:hover {
+            opacity: .5;
+        }
+
+        .pane-footer-right-item2 {
+            width: 354px;
+            margin-top: 30px;
+        }
+
+        .fr-sns ul {
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .fr-sns img:hover {
+            opacity: .5;
+        }
+
+        .pane-footer .row {
+            padding-bottom: 44px;
+        }
+        
+        .pane-footer-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 60px;
+        }
+
+        .pane-footer-bottom-nav {
+            margin-top: 35px;
+        }
+
+        .pane-footer-bottom-nav ul {
+            align-items: center;
+        }
+
+        .pane-footer-bottom-nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .pane-footer-bottom-nav a:hover {
+            color: #C6C6C6;
+        }
+
+        .copyright {
+            margin-top: 19px;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .footer-pagetop {
+            display: block;
+            position: fixed;
+            top: auto;
+            right: 20px;
+            bottom: 20px;
+            z-index: 999;
+        }
+
+
+        .footer-pagetop a {
+            display: block;
+            position: relative;
+            width: 54px;
+            height: 37px;
+            background: url('./nippon-dept/page_top.png');
+            background-size: contain;
+        }
+
+        .footer-pagetop a:hover {
+            opacity: .5;
+        }
+
+        .logo-footer img:hover {
+            opacity: .5;
+        }
+
+/* -------------------------------mobile----------------------------------------- */
+
+    /* --------------------------header-m------------------------- */
+        .header-m {
+            display: none;
+        }
+
+        .header-m-top {
+            position: relative;
+        }
+
+        .header-m-logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .header-m-logo a:hover {
+            opacity: .5;
+        }
+
+        .header-m-right ul {
+            width: 100%;
+            height: auto;
+        }
+        
+        .header-m-right li {
+            list-style: none;
+            color: #000;
+            /* width: 25px;
+            height: 25px; */
+            width: 15%;
+            height: 100%;
+        }
+
+        .header-m-right li img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .header-m-right a:hover {
+            opacity: .5;
+        }
+
+        .header-m-center ul {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
+
+        .header-m-center li {
+            list-style: none;
+            width: 10%;
+            height: 100%;
+        }
+
+        .header-m-center li span {
+            width: 60px;
+            margin-top: 12px;
+        }
+
+        .header-m-center a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: black;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .header-m-center a:hover {
+            opacity: .5;
+        }
+
+
+    /* --------------------------------info-m------------------------------------     */
+        .info-img-m {
+            display: none;
+        }
+
+     /* -------------------------------------block-concept-m------------------- */
+        .block-concept-m {
+            width: 100%;
+            background: #fff;
+            /* padding: 52px 0; */
+            display: none;
+        } 
+        
+        .block-concept-detail-m {
+            /* width: 1025px;
+            height: 396px; */
+            width: 70%;
+            height: 100%;
+            padding: 40px 0;
+        }
+
+        .block-concept-detail-comment-m {
+            /* width: 300px; */
+            width: 100%;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .block-concept-detail-link-m a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000;
+            width: 100%;
+            height: 100%;
+            padding-left: 70px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .block-concept-detail-link-m a::after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            width: 46px;
+            height: 46px;
+            border: 1px solid #171717;
+            background-color: #fff;
+            border-radius: 50%;
+            background-image: url('./nippon-dept/ico_link_arw_off.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 22px 6px;
+        }
+
+        .block-concept-detail-link-m a:hover {
+            opacity: .5;
+        }
+   /* ------------------------- footer-m------------------------------------ */
+        .footer-m {
+            width: 100%;
+            background: #e5e4db;
+            padding: 60px 20px;
+            margin-top: 80px;
+            display: none;
+        }
+
+        .footer-m-left a:hover {
+            opacity: .5;
+        }
+
+        .footer-m-right li {
+            border-bottom: 1px solid #c6c6c6;
+        }
+
+        .footer-m-right a {
+            color: black;
+            text-decoration: none;
+            font-size: 1.4rem;   
+        }
+
+        .footer-m-right a:hover {
+            color: #c6c6c6;
+        }
+
+        .footer-m-top {
+            border-bottom: 1px solid #c6c6c6;
+            padding-bottom: 30px;
+        }
+
+        .footer-m-bottom .row {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 30px;
+            padding-bottom: 60px;
+        }
+
+        .logo-footer-m:hover {
+            opacity: .5;
+        }
+
+        .copyright-m {
+            font-size: 1.2rem;
+        }
+
+        .footer-pagetop-m {
+            display: block;
+            position: fixed;
+            top: auto;
+            right: 20px;
+            bottom: 60px;
+            z-index: 999;
+            width: 54px;
+            height: 37px;
+        }
+
+        .footer-pagetop-m a {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: url('./nippon-dept/page_top.png') no-repeat;
+            background-size: contain;
+        }
+
+        .footer-pagetop-m:hover {
+            opacity: .5;
+        }
+
+
+ /* -----------------------------------------mobile----------------------------------------   */
+        @media screen and (max-width:992px) {
+            .header-top {
+                display: none;
+            }
+
+            .header-logo, .header-center, .header-right {
+                display: none;
+            }
+
+            .header-m {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width:576px) {
+            header {
+                padding-bottom: 30px;
+            }
+            
+            .pane-main {
+                width: 100%;
+            }
+
+            .pane-main-top-btn {
+                display: none;
+            }
+
+            .left-menu {
+                display: none;
+            }
+
+            .info {
+                padding-left: 0;
+            }
+
+            .info-img {
+                display: none;
+            }
+
+            .info-img-m {
+                display: flex;
+                margin-bottom: 10px;
+            }
+            
+
+            .block-top-buy .ttl a {
+                padding: 0 15px;
+            }
+
+            .next-page {
+                display: flex;
+                justify-content:flex-end;
+                padding: 0 15px;
+            }
+            
+            .block-top-read {
+            margin-bottom: 100px;
+            }
+
+            .block-concept {
+                display: none;
+            }
+
+            .block-concept-m {
+                display: block;
+            }
+            
+            .pane-footer {
+                display: none;
+            }
+
+            .footer-m {
+                display: block;
+            }
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+                <div class="header-top">
+                    <ul>
+                        <li class="header-top-text border-right pr-3"><a href="#">5,000円（税込）で送料無料！</a></li>
+                        <li class="header-top-text ml-3"><a href="#">日本百貨店について</a></li>
+                    </ul>
+                </div>
+            
+            <div class="header-m pt-5">
+                <div class="header-m-top d-flex justify-content-end">
+                    <div class="header-m-logo" style="width: 33%; height: auto;">
+                            <a href="#"><img src="./nippon-dept/logo.png" style="width: 100%; height: 100%;" alt=""></a>
+                    </div>
+                    <div class="header-m-right">
+                        <ul class="d-flex justify-content-end">
+                            <li>
+                                <a href="#"><img src="./nippon-dept/ico_header_search.png" alt=""></a>
+                            </li>
+                            <li class="ml-4">
+                                <a href="#"><img src="./nippon-dept/ico_header_cart.png" alt=""></a>
+                            </li>
+                            <li class="ml-4">
+                                <a href="#"><img src="./nippon-dept/bars.png" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-m-center mt-5">
+                    <ul class="d-flex justify-content-center">
+                        <li class="mr-5">
+                            <a href="#"><img src="./nippon-dept/ico_gnav_1.png" style="width: 100%; height: 100%;" alt=""><span>お買い物</span></a>
+                        </li>
+                        <li class="mr-5">
+                            <a href="#"><img src="./nippon-dept/ico_gnav_2.png" style="width: 100%; height: 100%;" alt=""><span>特集</span></a>
+                        </li>
+                        <li class="mr-5">
+                            <a href="#"><img src="./nippon-dept/ico_gnav_3.png" style="width: 100%; height: 100%;" alt=""><span>読み物</span></a>
+                        </li>
+                        <li class="mr-5">
+                            <a href="#"><img src="./nippon-dept/ico_gnav_4.png" style="width: 100%; height: 100%;" alt=""><span>コンセプト</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./nippon-dept/ico_gnav_5.png" style="width: 100%; height: 100%;" alt=""><span>店舗情報</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="header-main d-flex">
+                    <div class="header-logo">
+                        <a href="#"><img src="./nippon-dept/logo.png" alt=""></a>
+                    </div>
+                    <div class="header-center">
+                        <ul class="d-flex list-unstyled">
+                            <li>
+                                <a href="#"><img src="./nippon-dept/ico_gnav_1.png" alt=""><span>お買い物</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="./nippon-dept/ico_gnav_2.png" alt=""><span>特集</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="./nippon-dept/ico_gnav_3.png" alt=""><span>読み物</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="./nippon-dept/ico_gnav_4.png" alt=""><span>コンセプト</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="./nippon-dept/ico_gnav_5.png" alt=""><span>店舗情報</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-btn">
+                            <ul class="d-flex justify-content-end list-unstyled ">
+                                <li class="">
+                                    <a href="#"><img src="./nippon-dept/ico_header_register.png" alt=""><span>会員登録</span></a>
+                                </li>
+                                <li class="ml-5">
+                                    <a href="#"><img src="./nippon-dept/ico_header_login.png" alt=""><span>ログイン</span></a>
+                                </li>
+                                <li class="ml-5">
+                                    <a href="#"><img src="./nippon-dept/ico_header_cart.png" alt=""><span>買い物かご</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header-search d-flex">
+                            <form class="header-form">
+                                <input class="search-keyword" type="text" placeholder="キーワードを入力" >
+                            </form>
+                            <a href="#">
+                                <div class="header-search-icon">
+                                    <img src="./nippon-dept/ico_header_search.png" style="width:100%; height:100%;" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="pane-contents d-flex justify-content-between">
+                    <div class="left-menu flex-column ">
+                        <div class="left-mtnu-title mb-3">
+                            <p style="font-size: 1.8rem;">ほしいもの</p>
+                        </div>
+                        <div class="clothes" style="border-bottom:1px solid #C6C6C6;" >
+                            <div class="clothes-img mb-3" style="width: 31px; height:25px;">
+                                <a href="#"><img src="./nippon-dept/ttl_clothing.png" style="width:100%; height:100%;" alt=""></a>
+                            </div>
+                            <div class="item-list">
+                                <a href="#">衣服</a>
+                                <span></span>
+                            </div>
+                            <ul>
+                                <li class="item">
+                                    <a href="#">巻きもの</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">バッグ</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">服飾雑貨</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="food mt-4" style="border-bottom:1px solid #C6C6C6;">
+                            <div class="food-img mb-3" style="width: 31px; height:25px;">
+                                <a href="#"><img src="./nippon-dept/ttl_food.png" style="width:100%; height:100%;" alt=""></a>
+                            </div>
+                            <div class="item-list">
+                                <a href="#">ごはんのお供</a>
+                                <span></span>
+                            </div>
+                            <div class="item-list">
+                                <a href="#">缶詰</a>
+                                <span></span>
+                            </div>
+                            <div class="item-list">
+                                <a href="#">おつまみ</a>
+                                <span></span>
+                            </div>
+                            <div class="item-list">
+                                <a href="#">出汁・調味料</a>
+                                <span></span>
+                            </div>
+                            <div class="item-list">
+                                <a href="#">乾物・レトルト</a>
+                                <span></span>
+                            </div>
+                            <div class="item-list">
+                                <a href="#">麺</a>
+                                <span></span>
+                            </div>
+                            <div class="item-list">
+                                <a href="#">お菓子</a>
+                                <span></span>
+                            </div>
+                            <div class="item-list">
+                                <a href="#">ジャム、ドライフルーツ</a>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="drink mt-4" style="border-bottom:1px solid #C6C6C6;">
+                            <div class="drink-img mb-3" style="width: 31px; height:25px;">
+                                <a href="#"><img src="./nippon-dept/ttl_drink.png" style="width:100%; height:100%;" alt=""></a>
+                            </div>
+                            <ul>
+                                <li class="item"> 
+                                    <a href="#">お茶・コーヒー・紅茶</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">ジュース</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">シロップ・甘酒</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="live mt-4" style="border-bottom:1px solid #C6C6C6;">
+                            <div class="live-img mb-3" style="width: 31px; height:25px;">
+                                <a href="#"><img src="./nippon-dept/ttl_living.png" style="width:100%; height:100%;" alt=""></a>
+                            </div>
+                            <ul>
+                                <li class="item">
+                                    <a href="#">台所道具</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">健康／美容</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">アロマグッズ</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">布もの</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="play mt-4" style="border-bottom:1px solid #C6C6C6;">
+                            <div class="play-img mb-3" style="width: 31px; height:25px;">
+                                <a href="#"><img src="./nippon-dept/ttl_play.png" style="width:100%; height:100%;" alt=""></a>
+                            </div>
+                            <ul>
+                                <li class="item">
+                                    <a href="#">玩具</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">趣味</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">書籍</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="left-mtnu-title mt-5">
+                            <p style="font-size: 1.8rem;">イチオシ</p>
+                        </div>
+                        <div class="recommend" style="border-bottom:1px solid #C6C6C6;">
+                            <ul>
+                                <li class="item">
+                                    <a href="#">特集</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">ギフト</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">新着商品</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">人気ランキング</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">季節のオススメ</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">日本百貨店オリジナル</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="left-mtnu-title mt-5">
+                            <p style="font-size: 1.8rem;">#今の気分</p>
+                        </div>
+                        <div class="feeling" style="border-bottom:1px solid #C6C6C6;">
+                            <ul>
+                                <li class="item">
+                                    <a href="#">#丁寧なくらし</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#自分ご褒美</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#ここぞのイッピン</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#こだわりが過ぎる</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#人気モノ</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#バイヤー推しモノ</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#ナニコレ珍百品</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#なつかしいモノ</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#暮らしを便利に</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#ありがとう</a>
+                                </li><li class="item">
+                                    <a href="#">#ジャケ買い</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#シェアしたい</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#かわいいは正義</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#ネオニッポンブンカ</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#毎日使いたい</a>
+                                </li><li class="item">
+                                    <a href="#">#あの人の喜ぶ顔が見たい</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#カラダにいいこと</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#美しいものジャパン</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#クセになる</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#ご挨拶といえば</a>
+                                </li><li class="item">
+                                    <a href="#">#眠れない夜は</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#秋旬</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#お米マニア</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#行楽のおとも</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#大人だってハロウィン</a>
+                                </li><li class="item">
+                                    <a href="#">#くだもの三昧</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#そろそろ防寒</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#秋の香り</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">#収穫祭</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="left-menu-bottom">
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="./nippon-dept/sidebanner_1.png" alt=""></a>
+                                </li>
+                                <li class="mt-3">
+                                    <a href="#"><img src="./nippon-dept/ooiribanner_0829_sidebanner.png" alt=""></a>
+                                </li>
+                                <li class="mt-3">
+                                    <a href="#"><img src="./nippon-dept/sidebanner_2.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> 
+
+
+                    <div class="pane-main">
+                        <div class="pane-main-top-bg">
+                            <div class="mv-logo" style="width: 22%; height: 51%;"  >
+                                <img src="./nippon-dept/logo-big.png" style="width: 100%; height: 100%;" alt="">
+                            </div>
+                            <div class="mv-comment" style="width:4%;height:55%;" >
+                                <img src="./nippon-dept/PCtagline_ooiri.png" style="width:100%;height: 100%;" alt="">
+                            </div>
+                            <div class="mv-bg">
+                                <a href="#">
+                                    <div class="mv-bg-img" style="width:100%; height:100%;">
+                                        <img src="./nippon-dept/ooiribanner_0902_mv.jpg" style="width:100%; height: 100%;" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pane-main-top-btn">
+                            <ul>
+                                <li style="background: black;">
+                                    <a href="#"></a>
+                                </li>
+                                <li class="ml-3 mr-3">
+                                    <a href="#"></a>
+                                </li>
+                                <li>
+                                    <a href="#"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="info">
+                            <div class="info-img">
+                                <img src="./nippon-dept/ttl_top_topics.png" style="width: 100%;height: 100%;" alt="">
+                            </div>
+                            <div class="info-img-m" style="width: 80px; height: 80px;">
+                                <img src="./nippon-dept/ttl_top_topics.png" style="width: 100%
+                                ;height: 100%;" alt="">
+                            </div>
+                            <div class="info-text">
+                                <div class="info-text-item d-flex">
+                                    <p class="info-text date">2021.10.19</p>
+                                    <p>『地域うまいもんマルシェ』甲府県の逸品！</p>
+                                </div>
+                                <div class="info-text-item d-flex">
+                                    <p class="info-text date">2021.10.11</p>
+                                    <p>『地域うまいもんマルシェ』兵庫県の逸品！</p>
+                                </div>
+                                <div class="info-text-item d-flex">
+                                    <p class="info-text date">2021.10.07</p>
+                                    <p>【出張！日本百貨店＠京王百貨店聖蹟桜ヶ丘店】</p>
+                                </div>
+                                <div class="next-page">
+                                    <a href="#">続きを読む</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="block-top-free">
+                            <div class="block-top-free-logo">
+                                <img src="./nippon-dept/ttl_top_feature.png" alt="">
+                            </div>
+                            <div class="block-top-free-img">
+                                <div class="col-12 col-md-12 block-top-free-img1" >
+                                    <a href="#">
+                                        <div class="big">
+                                            <img src="./nippon-dept/top_first_zubora.jpg" style="width: 100%; height: 100%;" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 col-12 block-top-free-left">
+                                    <a href="#">
+                                        <div class="img-450">
+                                            <img src="./nippon-dept/imokuri_top_under.jpg" style="width: 100%; height: 100%;" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 col-12 block-top-free-right">
+                                    <a href="#">
+                                        <div class="img-450">
+                                            <img src="./nippon-dept/mikkeichibanner_0829_thumbnail_1.png" style="width: 100%; height: 100%;" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 col-12 block-top-free-left">
+                                    <a href="#">
+                                        <div class="img-450">
+                                            <img src="./nippon-dept/ooiribanner_0829_thumbnail_1.png"   style="width: 100%; height: 100%;" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 col-12 block-top-free-right">
+                                    <a href="#">
+                                        <div class="img-450">
+                                            <img src="./nippon-dept/top_first1.jpg" style="width: 100%; height: 100%;" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="next-page">
+                                <a href="#">特集一覧へ</a>
+                            </div>
+                        </div>
+                       
+                        <div class="block-top-buy">
+                            <div class="block-top-buy-logo">
+                                <img src="./nippon-dept/ttl_top_buy.png" alt="">
+                            </div>
+                            <div class="block-top-buy ttl mb-5">
+                                <a href="#">新着商品</a>
+                            </div>
+                            <div class="block-top-buy goods">
+                                <div class="col-md-3 col-3 goods-item">
+                                    <div class="goods-item-img">
+                                        <a href="#"><img src="./nippon-dept/hirotaglass_shouyusashi_8kaku_s.jpg" style="width: 100%
+                                        ; height: 100%;" alt=""></a>
+                                    </div>
+                                    <div class="goods-item-text mt-3">
+                                        <p>
+                                            <a href="#">復刻醤油差し アンバー色 八角</a>
+                                        </p>
+                                        <p>1,980円(税込み)</p>
+                                    </div> 
+                                </div>
+                                <div class="col-md-3 col-3 goods-item">
+                                    <div class="goods-item-img">
+                                        <a href="#"><img src="./nippon-dept/hirotaglass_shouyusashi_maru_s.jpg" style="width: 100%
+                                            ; height: 100%;" alt=""></a>
+                                    </div>
+                                    <div class="goods-item-text mt-3">
+                                        <p>
+                                            <a href="#">復刻醤油差し アンバー色 丸</a>
+                                        </p>
+                                        <p>1,980円(税込み)</p>
+                                    </div> 
+                                </div>
+                                <div class="col-md-3 col-3 goods-item">
+                                    <div class="goods-item-img">
+                                        <a href="#"><img src="./nippon-dept/saramikiriotoshi_s.jpg" style="width: 100%; height: 100%;"  alt=""></a>
+                                    </div>
+                                    <div class="goods-item-text mt-3">
+                                        <p>
+                                            <a href="#">サラミ切り落し  250g</a>
+                                        </p>
+                                        <p>1,200円(税込み)</p>
+                                    </div> 
+                                </div>
+                                <div class="col-md-3 col-3 goods-item">
+                                    <div class="goods-item-img">
+                                        <a href="#"><img src="./nippon-dept/kiokesaba_s.jpg" style="width: 100%; height: 100%;" alt=""></a>
+                                    </div>
+                                    <div class="goods-item-text mt-3">
+                                        <p>
+                                            <a href="#">木桶醤油＆酢のSABA缶</a>
+                                        </p>
+                                        <p>376円(税込み)</p>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="next-page">
+                                <a href="#">新着商品一覧へ</a>
+                            </div>  
+
+                            <div class="block-top-buy ttl mt-5 mb-5">
+                                <a href="#">人気ランキング</a>
+                            </div>
+                            <div class="block-top-buy goods">
+                                <div class="col-md-3 col-3 goods-item">
+                                    <div class="goods-item-img">
+                                        <a href="#"><img src="./nippon-dept/ichigo_milknomontoSQ.jpg" style="width: 100%; height: 100%;" alt=""></a>
+                                    </div>
+                                    <div class="goods-item-text mt-3">
+                                        <p>
+                                            <a href="#">いちごミルクのもと</a>
+                                        </p>
+                                        <p>1,360円(税込み)</p>
+                                    </div> 
+                                </div>
+                                <div class="col-md-3 col-3 goods-item">
+                                    <div class="goods-item-img">
+                                        <a href="#"><img src="./nippon-dept/kanimiso_bagnaSQ.jpg" style="width: 100%; height: 100%;" alt=""></a>
+                                    </div>
+                                    <div class="goods-item-text mt-3">
+                                        <p>
+                                            <a href="#">かにみそバーニャカウダ</a>
+                                        </p>
+                                        <p>1,418円(税込み)</p>
+                                    </div> 
+                                </div>
+                                <div class="col-md-3 col-3 goods-item">
+                                    <div class="goods-item-img">
+                                        <a href="#"><img src="./nippon-dept/mahounonikukakeSQ.jpg" style="width: 100%; height: 100%;" alt=""></a>
+                                    </div>
+                                    <div class="goods-item-text mt-3">
+                                        <p>
+                                            <a href="#">黒豚チャーシュー 魔法の肉かけ</a>
+                                        </p>
+                                        <p>1,247円(税込み)</p>
+                                    </div> 
+                                </div>
+                                <div class="col-md-3 col-3 goods-item">
+                                    <div class="goods-item-img">
+                                        <a href="#"><img src="./nippon-dept/samugetankitSQ.jpg" style="width: 100%; height: 100%;" alt=""></a>
+                                    </div>
+                                    <div class="goods-item-text mt-3">
+                                        <p>
+                                            <a href="#">参鶏湯キット</a>
+                                        </p>
+                                        <p>1,036円(税込み)</p>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="next-page">
+                                <a href="#">人気ランキング一覧へ</a>
+                            </div> 
+                            
+                            <div class="block-top-buy ttl mt-5 mb-5">
+                                <a href="#">季節のオススメ</a>
+                            </div>
+                            <div class="block-top-buy goods">
+                                <div class="col-md-3 col-3 goods-item">
+                                    <div class="goods-item-img">
+                                        <a href="#"><img src="./nippon-dept/ichigo_milknomontoSQ.jpg" style="width: 100%; height: 100%;" alt=""></a>
+                                    </div>
+                                    <div class="goods-item-text mt-3">
+                                        <p>
+                                            <a href="#">いちごミルクのもと</a>
+                                        </p>
+                                        <p>1,360円(税込み)</p>
+                                    </div> 
+                                </div>
+                                <div class="col-md-3 col-3 goods-item">
+                                    <div class="goods-item-img">
+                                        <a href="#"><img src="./nippon-dept/nomuninjin8_S.jpg" style="width: 100%; height: 100%;" alt=""></a>
+                                    </div>
+                                    <div class="goods-item-text mt-3">
+                                        <p>
+                                            <a href="#">飲むにんじん　8本セット</a>
+                                        </p>
+                                        <p>3,456円(税込み)</p>
+                                    </div> 
+                                </div>
+                                <div class="col-md-3 col-3 goods-item">
+                                    <div class="goods-item-img">
+                                        <a href="#"><img src="./nippon-dept/tomocola_syrupSQ.jpg" style="width: 100%; height: 100%;" alt=""></a>
+                                    </div>
+                                    <div class="goods-item-text mt-3">
+                                        <p>
+                                            <a href="#">東京クラフトコーラ</a>
+                                        </p>
+                                        <p>1,701円(税込み)</p>
+                                    </div> 
+                                </div>
+                                <div class="col-md-3 col-3 goods-item">
+                                    <div class="goods-item-img">
+                                        <a href="#"><img src="./nippon-dept/kanimiso_bagnaSQ.jpg" style="width: 100%; height: 100%;" alt=""></a>
+                                    </div>
+                                    <div class="goods-item-text mt-3">
+                                        <p>
+                                            <a href="#">かにみそバーニャカウダ</a>
+                                        </p>
+                                        <p>1,418円(税込み)</p>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="next-page">
+                                <a href="#">季節のオススメ一覧へ</a>
+                            </div> 
+                        </div>
+
+                        <div class="block-top-read">
+                            <div class="block-top-read-logo">
+                                <img src="./nippon-dept/ttl_top_reading.png" alt="">
+                            </div>
+                            <div class="block-top-read-block2 d-flex justify-content-between flex-wrap">
+                                <div class="col-md-6 col-12 block-top-read-block2 left">
+                                    <div class="img-450">
+                                        <img src="./nippon-dept/01_210716nippon-dept_002-768x512.jpg" style="width: 100%; height: 100%;" alt="">
+                                    </div>
+                                    <div class="block-top-read-text">
+                                        <p class="date">2021.Oct.20</p>
+                                        <p class="ttl">心地よさは、小さな道具から／「emma.」江間瞳</p>
+                                        <p class="comment">心身が満ちていく和食屋 「はい、お待たせしました」と目の前に置かれた野菜たっぷりの定食。この日は鮭とアスパラとズッキーニの塩バター炒め、夏野菜のラタトゥイユに土鍋で炊いたふっくらご飯。素材本来のうまみを生かした食事を口に […]</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12 block-top-read-block2 right">
+                                    <div class="img-450">
+                                        <img src="./nippon-dept/IMG_5061-2-768x512.jpg" style="width: 100%; height: 100%;" alt="">
+                                    </div>
+                                    <div class="block-top-read-text">
+                                        <p class="date">2021.Oct.05</p>
+                                        <p class="ttl">木桶から生まれた最強コラボ缶詰、ついに完成！</p>
+                                        <p class="comment">突然のお誘い、いざ福岡へ コラム2回目にして早くも行き詰まっています… いやー書くネタがない！というのもコロナの影響で出張がことごとくキャンセルになり…作り手さんに会いに行けないのです。どうしたもんかなと困っていたら、知 […]</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12 block-top-read-block3 mt-5">
+                                    <div class="img-298">
+                                        <img src="./nippon-dept/01_210718nippon-dept_205-768x512.jpg" style="width: 100%; height: 100%;" alt="">
+                                    </div>
+                                    <div class="block-top-read-text-3">
+                                        <p class="date">2021.Sep.21</p>
+                                        <p class="ttl">今日を明日につなぐ甘酒。／市岡祐次郎</p>
+                                        <p class="comment">生き方ももの選びも“流れ”を大切に 開口一番「僕が暮らしを語るなんて恐れ多いです」と気さくに笑う市岡さん。その飾らない一言に、初対面にもかかわらず距離がぐっと近づくのを感じます。 市岡さんはWebメディア「しゃかいか！」 […]</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12 block-top-read-block3 mt-5">
+                                    <div class="img-298">
+                                        <img src="./nippon-dept/FullSizeRender_title-768x512.jpg" style="width: 100%; height: 100%;" alt="">
+                                    </div>
+                                    <div class="block-top-read-text-3">
+                                        <p class="date">2021.Sep.08</p>
+                                        <p class="ttl">こだわりと人柄がギュッと詰まった缶詰工場へ！／高木商店</p>
+                                        <p class="comment">いま、缶詰がアツイ！ということで… 最近缶詰が流行ってますよね。コンビニやスーパーなんかにも何十種類と揃っていて、とにかくそのバリエーションに驚きます。 僕自身も割と好きで、夜遅く帰ってきて料理するのが面倒くさいときとか […]</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12 block-top-read-block3 mt-5">
+                                    <div class="img-298">
+                                        <img src="./nippon-dept/00_210713nippon-dept_264-scaled-e1633002175196-768x521.jpg" style="width: 100%; height: 100%;" alt="">
+                                    </div>
+                                    <div class="block-top-read-text-3">
+                                        <p class="date">2021.Sep.08</p>
+                                        <p class="ttl">人を感じる、もの選び。／「proto器とタカラモノ」店主・樋口嶺</p>
+                                        <p class="comment">物語ごと、届けたい 昔ながらと洗練されたものづくりが交差する東京・蔵前。築60年という趣あるビルの階段を上がった先に「proto 器とタカラモノ」はあります。静謐感をまとった白の空間にテンポよく並ぶ色とりどりの器。足を運 […]</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12 block-top-read-block3 mt-5">
+                                    <div class="img-298">
+                                        <img src="./nippon-dept/hatarakuhitobito_016-1-e1632997058941-768x595.jpg" style="width: 100%; height: 100%;" alt="">
+                                    </div>
+                                    <div class="block-top-read-text-3">
+                                        <p class="date">2021.Sep.08</p>
+                                        <p class="ttl">何気ない会話から生まれる、接客ならではの価値を届けたい。ハタラクヒトビト７人目／とうきょう店副店長・沖津さん</p>
+                                        <p class="comment">日本百貨店のお客さんだった私が、スタッフに 日本百貨店に出会ったのは、大学生のとき。もともと日本の工芸品や雑貨に興味があって、店舗にふらっと立ち寄ったのが最初でした。いろいろな商品があるんだなぁと、店内を見回しているとス […]</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12 block-top-read-block3 mt-5">
+                                    <div class="img-298">
+                                        <img src="./nippon-dept/4-9-e1631107321344.jpg" style="width: 100%; height: 100%;" alt="">
+                                    </div>
+                                    <div class="block-top-read-text-3">
+                                        <p class="date">2021.Sep.08</p>
+                                        <p class="ttl">東京生まれ、東京育ち。おいしくて、かっこいい煎餅と歩む。</p>
+                                        <p class="comment">クラフト素材のパッケージに英語の文字。透明フィルムからのぞく、色とりどりのお煎餅。売り切れ御免。[…]</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12 block-top-read-block3 mt-5">
+                                    <div class="img-298">
+                                        <img src="./nippon-dept/1-8-768x512.jpg" style="width: 100%; height: 100%;" alt="">
+                                    </div>
+                                    <div class="block-top-read-text-3">
+                                        <p class="date">2021.Sep.08</p>
+                                        <p class="ttl">夏の終わりは、クリームソーダを。</p>
+                                        <p class="comment">みなさん、今年はクリームソーダを飲まれましたか？　まだですか？　本当ですか？　大丈夫ですか？  夏、終われますか？というか、夏、はじまってますか？ ああ、初回から声高に偏った主張をしてしまい、たいへん失礼いたし […]</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="next-page">
+                                <a href="#">コラム一覧へ</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </main>
+
+    <div class="container block-concept">
+        <div class="row justify-content-between">
+            <div class="block-concept-detail">
+                <div class="block-concept-detail-comment">
+                    <p>
+                        「ニッポンの百貨をおもしろく。」というココロザシを胸に、全国各地のスグレモノを発掘。私たちならではの切り口で新編集して、ニッポンのいろいろをご提供しています。
+                    </p>
+                </div>
+                <div class="block-concept-detail-link">
+                    <a href="#">コーポレートサイトへ</a>
+                </div>
+            </div>
+            <div class="block-concept-ttl" style="width: 7%; height: 71%;">
+                <img src="./nippon-dept/ttl_top_kokoro.png" style="width: 100%; height: 100%;" alt="">
+            </div>
+        </div>
+    </div> 
+
+    <div class="container block-concept-m">
+        <div class="row justify-content-between px-4">
+            <div class="block-concept-detail-m">
+                 <div class="block-concept-detail-comment-m">
+                     <p>
+                        「ニッポンの百貨をおもしろく。」というココロザシを胸に、全国各地のスグレモノを発掘。私たちならではの切り口で新編集して、ニッポンのいろいろをご提供しています。
+                    </p>
+                </div>
+                <div class="block-concept-detail-link-m">
+                    <a href="#">コーポレートサイトへ</a>
+                </div>
+            </div>
+            <div class="block-concept-ttl-m pt-4 pb-5" style="width: 10%; height: auto;">
+                <img src="./nippon-dept/ttl_top_kokoro.png" style="max-width: 100%; height:100%; " alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="block-concept-m-img px-4">
+                <img src="./nippon-dept/bnr_EC_kokoro.jpg" style="width: 100%;height: 100%;" alt="">
+            </div>
+        </div>
+    </div>
+        
+    <footer class="pane-footer">
+        <div class="container">
+            <div class="footer-pagetop">
+                <a href="#"></a>
+            </div>
+            <div class="row justify-content-between" style="border-bottom: 1px solid #C6C6C6;">
+                <div class="pane-footer-left d-flex">
+                    <div class="left-img" style="width: 24%;">
+                        <a href="#"><img src="./nippon-dept/ttl_footer_shop.png" style="width: 100%
+                        ;" alt=""></a>
+                    </div>
+                    <div class="left-img ml-5"  style="width: 24%;">
+                        <a href="#"><img src="./nippon-dept/ttl_footer_contact.png" style="width: 100%
+                            ;" alt=""></a>
+                    </div>
+                </div>
+                <div class="pane-footer-right d-flex">
+                    <div class="pane-footer-right-item">
+                        <div class="fr-ttl">送料について</div>
+                        <div class="fr-text">
+                            <p class="fr-text1">
+                                通常（常温）配送料金：710円（北海道1,650円/沖縄1,870円）
+                                <br>
+                                クール便配送料金：910円（北海道1,850円/沖縄2,070円）
+                            </p>
+                            <p class="fr-text2">
+                                ※税込5,000円以上ご購入で送料無料です。
+                                <br>
+                                ※冷凍商品と常温商品を同時にご購入された場合、商品の同梱はできかねます。それぞれ配送方法が異なるため、別々の送料をいただきます。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pane-footer-right-item ml-5">
+                        <div class="fr-ttl">ご一読ください</div>
+                        <div class="fr-text">
+                            <p class="fr-text1">
+                                ご注文の際に、まずこちらのご利用ガイドをご一読ください。
+                            </p>
+                            <div class="fr-btn">
+                                <a href="#">ご利用ガイド</a>
+                            </div>
+                            <div class="fr-btn">
+                                <a href="#">店舗専用ポイントアプリはこちら</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pane-footer-right-item2">
+                        <div class="fr-ttl">お支払いについて</div>
+                        <div class="fr-text">
+                            <p class="fr-text1">
+                                クレジットカード決済・代金引換・Amazon Pay・Line Payがご利用になれます。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pane-footer-right-item2 ml-5">
+                        <div class="fr-ttl">Follow us</div>
+                        <div class="fr-sns">
+                            <ul class="list-unstyled d-flex">
+                                <li class="mr-4" style="width:26px; height: 25px;">
+                                    <a href="#"><img src="./nippon-dept/ico_footer_sns_fb.png" style="width:100%; height: 100%;" alt=""></a>
+                                </li>
+                                <li class="mr-4" style="width:25px; height: 25px;">
+                                    <a href="#"><img src="./nippon-dept/ico_footer_sns_tw.png" style="width:100%; height: 100%;" alt=""></a>
+                                </li>
+                                <li style="width:25px;height:25px;">
+                                    <a href="#"><img src="./nippon-dept/ico_footer_sns_ig.png" style="width:100%; height: 100%;" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pane-footer-bottom">
+                <div class="logo-footer" style="width: 135px; height: 22px;">
+                    <a href="#"><img src="./nippon-dept/logo_footer.png" style="width: 100%; height: 100%;" alt=""></a>
+                </div>
+                <div class="pane-footer-bottom-nav">
+                    <ul class="list-unstyled d-flex">
+                        <li>
+                            <a href="#">特定商取引法表示</a>
+                        </li>
+                        <li class="ml-3">
+                            <a href="#">プライバシーポリシー</a>
+                        </li>
+                        <li class="ml-3">
+                            <a href="#">運営会社</a>
+                        </li>
+                        <li class="ml-3">
+                            <a href="#">採用情報</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    Copyright © Nippon Department Store Inc.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer class="footer-m">
+        <div class="container">
+            <div class="footer-m-top row">
+                <div class="footer-m-left">
+                    <div class="footer-m-left-img d-flex">
+                        <div class="left-img-m ml-4" style="width: 17%; ">
+                            <a href="#"><img src="./nippon-dept/ttl_footer_shop.png" style="width: 100%;" alt=""></a>
+                        </div>
+                        <div class="left-img-m ml-5" style="width: 17%; ">
+                            <a href="#"><img src="./nippon-dept/ttl_footer_contact.png" style="width: 100%; " alt=""></a>
+                        </div>
+                    </div>
+                    <div class="footer-m-sns mt-5">
+                        <ul class="list-unstyled d-flex">
+                            <li class="ml-3" style="width: 9%; height: 100%;">
+                                <a href="#"><img src="./nippon-dept/ico_footer_sns_fb.png" style="width:100%; height: 100%;" alt=""></a>
+                            </li>
+                            <li class="ml-5" style="width: 9%; height: 100%;">
+                                <a href="#"><img src="./nippon-dept/ico_footer_sns_tw.png" style="width:100%; height: 100%;" alt=""></a>
+                            </li>
+                            <li class="ml-5" style="width: 9%; height: 100%;">
+                                <a href="#"><img src="./nippon-dept/ico_footer_sns_ig.png" style="width:100%; height: 100%;" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-m-right">
+                    <ul class="list-unstyled">
+                        <li class="pb-3">
+                            <a href="#">ご利用ガイド</a>
+                        </li>
+                        <li class="pt-4 pb-3">
+                            <a href="#">店舗用ポイントアプリ</a>
+                        </li>
+                        <li class="pt-4 pb-3">
+                            <a href="#">特定商取引法表示</a>
+                        </li>
+                        <li class="pt-4 pb-3">
+                            <a href="#">プライバシーポリシー</a>
+                        </li>
+                        <li class="pt-4 pb-3">
+                            <a href="#">運営会社</a>
+                        </li>
+                        <li class="pt-4 pb-3">
+                            <a href="#">採用情報</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-m-bottom">
+            <div class="row">
+                <div class="logo-footer-m mb-4" style="width: 30%;height: 100%;">
+                    <a href="#"><img src="./nippon-dept/logo_footer.png" style="width: 100%; height: 100%;" alt=""></a>
+                </div>
+                <div class="copyright-m">
+                    Copyright © Nippon Department Store Inc.
+                </div>
+            </div>
+        </div>
+        <div class="footer-pagetop-m">
+            <a href="#"></a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youtube</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+        ul {
+            list-style: none;
+        }
+
+        .btn_login {
+            color: blue;
+            font-size: 14px;
+            height: 38px;
+            display: inline-flex;
+            align-items: center;
+            padding: 0 15px 0 45px;
+            border: 1px solid blue;
+            border-radius: 2px;
+            position: relative;
+        }
+        .btn_login::before {
+            content: "";
+            display: block;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background:blue;
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            
+        }
+
+        .header > .container {
+            padding: 0 20px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+
+        }
+        .button_burger {
+            width: 40px;
+            height: 40px;
+            background: gray;
+        }
+        .area_logo_header {
+            margin: 0 0 0 10px;
+        }
+        .area_logo_header .logo {
+            display: block;
+            width: 80px;
+            height: 30px;
+            background: gray;
+        }
+        .form_header {
+            margin: 0 auto;
+        }
+
+        .nav_header {
+            margin: 0 0 0 auto;
+        }
+        .list_nav_header {
+            display: flex;
+            align-items: center;
+        }
+        .list_nav_header > li + li {
+            margin: 0 0 0 10px;
+        }
+        .list_nav_header a:not(.btn_login) {
+            display: block;
+            width: 32px;
+            height: 32px;
+            background: gray;
+        }
+
+        .sidebar {
+            flex: 0 0 240px;
+        }
+
+        .sidebar .box {
+            padding: 10px 0;
+        }
+
+        .sidebar .box + .box {
+            border-top: 1px solid #ccc;
+        }
+
+        .list_nav_sidebar a{
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            height: 40px;
+            padding: 0 0 0 70px;
+            position: relative;
+        }
+        .list_nav_sidebar a::before {
+            content: "";
+            display: block;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background:gray;
+            position: absolute;
+            top: 50%;
+            left: 24px;
+            transform: translateY(-50%);
+        }
+
+        .area_register_sidebar {
+            padding: 10px 30px;
+        }
+        .area_register_sidebar .description {
+            font-size: 14px;
+            line-height: 1.5em;
+        }
+        .area_register_sidebar .wrap_btn {
+            margin-top: 10px;
+        }
+
+
+        .main {
+            background: #f9f9f9;
+            flex: auto;
+            min-width: 10px;
+            padding: 24px;
+        }
+        .main .box {
+            padding: 30px 0;
+        }
+        .main .box + .box {
+            border-top: 3px solid #ccc;
+        }
+
+        .list_video {
+            display: flex;
+            margin: -8px;
+        }
+        .list_video > li {
+            padding: 10px;
+            width: 25%;
+        }
+        .list_video .thumb {
+            width: 100%;
+            background:gray;
+        }
+        .list_video .thumb::before {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-top: 56.25%;
+        }
+        .list_video .layout {
+            display: flex;
+            margin: 10px 0 0;
+        }
+        .list_video .eye {
+            flex: 0 0 40px;
+            margin: 0 10px 0 0;
+        }
+        .list_video .img {
+            width: 100%;
+            border-radius: 50%;
+            background: gray;
+        }
+        .list_video .img::before {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-top: 100%;
+        }
+        .list_video .text {
+            flex: auto;
+            min-width: 10px;
+        }
+        .list_video .text .ttl {
+            font-size: 15px;
+        }
+        .list_video .text .user {
+            font-size: 14px;
+        }
+        .list_video .text .count {
+            font-size: 13px;
+        }
+
+        .layout_page {
+            display: flex;
+        }
+
+        .k {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    　 
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="button_burger">burger</div>
+            <div class="area_logo_header">
+                <a href="" class="logo">logo</a></div>
+            <form class="form_header" action="">
+                <div class="wrap_input">
+                    <input type="search">
+                </div>
+            </form>
+            <nav class="nav_header">
+                <ul class="list_nav_header">
+                    <li class="create"><a href="">creat</a></li>
+                    <li class="app"><a href="">app</a></li>
+                    <li class="setting"><a href="">setting</a></li>
+                    <li class="login"><a href="" class="btn_login">ログイン</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="layout_page">
+    <aside class="sidebar"> 
+        <div class="box">
+            <ul class="list_nav_sidebar">
+                <li><a href="">ホーム</a></li>
+                <li><a href="">急上昇</a></li>
+                <li><a href="">登録チャンネル</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <ul class="list_nav_sidebar">
+                <li><a href="">ライブラリ</a></li>
+                <li><a href="">履歴</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <div class="area_register_sidebar">
+                <p class="description">動画の評価、コメント、チャンネル登録を行うにはログインしてください。</p>
+                <div class="wrap_btn">
+                <a href="" class="btn_login">ログイン</a>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <ul class="list_nav_sidebar">
+                <li><a href="">音楽</a></li>
+                <li><a href="">スポーツ</a></li>
+                <li><a href="">ゲーム</a></li>
+                <li><a href="">映画と番組</a></li>
+                <li><a href="">ニュース</a></li>
+                <li><a href="">ライブ</a></li>
+                <li><a href="">学び</a></li>
+                <li><a href="">スポットライト</a></li>
+                <li><a href="">360°動画</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <ul class="list_nav_sidebar">
+                <li><a href="">チャンネル一覧</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <ul class="list_nav_sidebar">
+                <li><a href="">YouTube Premium</a></li>
+                <li><a href="">ライブ</a></li>
+            </ul>
+        </div>
+         <div class="box">
+            <ul class="list_nav_sidebar">
+                <li><a href="">設定</a></li>
+                <li><a href="">報告履歴</a></li>
+                <li><a href="">ヘルプ</a></li>
+                <li><a href="">フィードバックの送信</a></li>
+             </ul>
+        </div>
+    </aside>
+    <main class="main">
+        <div class="box">
+            <ul class="list_video">
+                <li>
+                    <article>
+                        <div class="thumb"></div>
+                        <div class="layout">
+                        <div class="eye">
+                            <div class="img"></div>
+                        </div>
+                        <div class="text">
+                            <p class="ttl">タイトルがここに記載されます。</p>
+                            <p class="user">ヒロコード</p>
+                            <p class="count">10万</p>
+                         </div>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <div class="thumb"></div>
+                        <div class="layout">
+                        <div class="eye">
+                            <div class="img"></div>
+                        </div>
+                        <div class="text">
+                            <p class="ttl">タイトルがここに記載されます。</p>
+                            <p class="user">ヒロコード</p>
+                            <p class="count">10万</p>
+                         </div>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <div class="thumb"></div>
+                        <div class="layout">
+                        <div class="eye">
+                            <div class="img"></div>
+                        </div>
+                        <div class="text">
+                            <p class="ttl">タイトルがここに記載されます。</p>
+                            <p class="user">ヒロコード</p>
+                            <p class="count">10万</p>
+                         </div>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <div class="thumb"></div>
+                        <div class="layout">
+                        <div class="eye">
+                            <div class="img"></div>
+                        </div>
+                        <div class="text">
+                            <p class="ttl">タイトルがここに記載されます。</p>
+                            <p class="user">ヒロコード</p>
+                            <p class="count">10万</p>
+                         </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </div>
+        <div class="box">
+            <ul class="list_video">
+                <li>
+                    <article>
+                        <div class="thumb"></div>
+                        <div class="layout">
+                        <div class="eye">
+                            <div class="img"></div>
+                        </div>
+                        <div class="text">
+                            <p class="ttl">タイトルがここに記載されます。</p>
+                            <p class="user">ヒロコード</p>
+                            <p class="count">10万</p>
+                         </div>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <div class="thumb"></div>
+                        <div class="layout">
+                        <div class="eye">
+                            <div class="img"></div>
+                        </div>
+                        <div class="text">
+                            <p class="ttl">タイトルがここに記載されます。</p>
+                            <p class="user">ヒロコード</p>
+                            <p class="count">10万</p>
+                         </div>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <div class="thumb"></div>
+                        <div class="layout">
+                        <div class="eye">
+                            <div class="img"></div>
+                        </div>
+                        <div class="text">
+                            <p class="ttl">タイトルがここに記載されます。</p>
+                            <p class="user">ヒロコード</p>
+                            <p class="count">10万</p>
+                         </div>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <div class="thumb"></div>
+                        <div class="layout">
+                        <div class="eye">
+                            <div class="img"></div>
+                        </div>
+                        <div class="text">
+                            <p class="ttl">タイトルがここに記載されます。</p>
+                            <p class="user">ヒロコード</p>
+                            <p class="count">10万</p>
+                         </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </div>
+        <div class="box">
+                <h3 class="k">急上昇</h3>
+            </div>
+            <ul class="list_video">
+                <li>
+                    <article>
+                        <div class="thumb"></div>
+                        <div class="layout">
+                        <div class="eye">
+                            <div class="img"></div>
+                        </div>
+                        <div class="text">
+                            <p class="ttl">タイトルがここに記載されます。</p>
+                            <p class="user">ヒロコード</p>
+                            <p class="count">10万</p>
+                         </div>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <div class="thumb"></div>
+                        <div class="layout">
+                        <div class="eye">
+                            <div class="img"></div>
+                        </div>
+                        <div class="text">
+                            <p class="ttl">タイトルがここに記載されます。</p>
+                            <p class="user">ヒロコード</p>
+                            <p class="count">10万</p>
+                         </div>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <div class="thumb"></div>
+                        <div class="layout">
+                        <div class="eye">
+                            <div class="img"></div>
+                        </div>
+                        <div class="text">
+                            <p class="ttl">タイトルがここに記載されます。</p>
+                            <p class="user">ヒロコード</p>
+                            <p class="count">10万</p>
+                         </div>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <div class="thumb"></div>
+                        <div class="layout">
+                        <div class="eye">
+                            <div class="img"></div>
+                        </div>
+                        <div class="text">
+                            <p class="ttl">タイトルがここに記載されます。</p>
+                            <p class="user">ヒロコード</p>
+                            <p class="count">10万</p>
+                         </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </div>
+    </main>
+    </div>
+</body>
+</html>
